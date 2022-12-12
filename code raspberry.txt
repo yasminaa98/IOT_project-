@@ -1,0 +1,43 @@
+import time
+#from firebase-admin import firebase
+import pyrebase
+from datetime import date
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(3,GPIO.IN)
+GPIO.setup(5,GPIO.OUT)
+
+config = {     
+  "apiKey": "AIzaSyAXw6w5g8QyVtxZC_d_fDnZqiJ6iZCFmdQ",
+  "authDomain": "iot-tp-d1f8e.firebaseapp.com",
+  "databaseURL": "https://iot-tp-d1f8e-default-rtdb.firebaseio.com/Lampe",
+  "storageBucket": "iot-tp-d1f8e.appspot.com"
+}
+
+#url = 'https://iot-tp-d1f8e-default-rtdb.firebaseio.com'
+#firebase = firebase.FirebaseApplication(url)
+
+firebase = pyrebase.initialize_app(config)
+db = firebase.database()
+today=date.today();
+while True :
+    if GPIO.input(3)==True:
+        print("something is here")
+        GPIO.output(5,GPIO.HIGH)
+        
+        db.child("etat").set("Allumé")
+        #db.child("etat").push("Allumé")
+        db.child("etat").update({str(today):"allumé"})
+        #db.child("Date").set(str(today))
+        #db.child("Date").push(str(today))
+        time.sleep(3)
+        
+    else:
+        print("nothing to detect")
+        #GPIO.output(5,0)
+        time.sleep(100)
+        #firebase.put("/dht", "/temp", "0.00")
+        #firebase.put("/dht", "/humidity", "0.00")
+        db.child("etat").update({str(today):"atteinte"})
+
+
