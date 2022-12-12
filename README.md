@@ -1,5 +1,5 @@
 <h1>Projet IOT</h1>
-        <h3>Les étapes pour démarer l'application :</h3>
+        <h3>Les étapes pour démarrer l'application :</h3>
         <ol>
         <li>executer l'application mobile</li>
         <li>taper le nom de la lampe</li>
