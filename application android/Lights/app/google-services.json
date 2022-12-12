@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "475201578928",
+    "firebase_url": "https://iot-tp-d1f8e-default-rtdb.firebaseio.com",
+    "project_id": "iot-tp-d1f8e",
+    "storage_bucket": "iot-tp-d1f8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475201578928:android:5419fcdc146bbf6340d875",
+        "android_client_info": {
+          "package_name": "com.example.lights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475201578928-2ccm168539bbep0k713rmjcoemjapve6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXw6w5g8QyVtxZC_d_fDnZqiJ6iZCFmdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475201578928-2ccm168539bbep0k713rmjcoemjapve6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
